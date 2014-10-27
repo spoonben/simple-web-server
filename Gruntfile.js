@@ -28,6 +28,17 @@ module.exports = function(grunt) {
           bases: ['public', 'dist']
         }
       }
+    },
+    watch: {
+        express:{
+          files: ['**/*.html'],
+          tasks: ['express'],
+          options: {
+            spawn: false,
+            livereload: true
+          }
+        }
+
     }
   });
 
@@ -35,9 +46,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-express');
 
   grunt.registerTask('default', ['express']);
-  grunt.registerTask('server', ['express', 'express-keepalive']);
+  grunt.registerTask('server', ['express', 'watch']);
 
 };
