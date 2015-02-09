@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git://github.com/spoonben/simple-web-server.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Ben Spoon",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/spoonben/simple-web-server/issues"
   },
